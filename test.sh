@@ -80,9 +80,9 @@ test_builtin() {
 #WIREGUARD_LISTEN_PORT=2001 WIREGUARD_INTERFACE_NAME=wgtest13 test_builtin wg wg "wg"
 #WIREGUARD_PRIVATE_KEY="qJKSCynonUUyR8oOYD174ppCa77e0h1aC4Uh/QnHaXo=" WIREGUARD_LISTEN_PORT=2002 WIREGUARD_INTERFACE_NAME=wgtest14 test_builtin wg wg "wg"
 
-test_builtin ts ts 'echo -e "TS=$TS"'
-sleep 1
-test_builtin ts ts 'echo -e "TS=$TS"'
-sleep 1
-test_builtin ts ts 'echo -e "TS=$TS"'
+test_builtin ts ts 'echo -e "TS=$TS|MS=$MS"'
+sleep .3
+test_builtin ts ts 'echo -e "TS=$TS|MS=$MS"'
+sleep .3
+test_builtin ts ts 'echo -e "TS=$TS|MS=$MS"'
 echo OK
