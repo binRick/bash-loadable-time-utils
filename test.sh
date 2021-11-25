@@ -3,10 +3,6 @@ set -e
 cd $(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
 export PATH=$PATH:$(pwd)/bin 
 
-if ! command -v ansi >/dev/null; then
-  alias ansi=$(pwd)/ansi
-fi
-
 BASH_TEST_PREFIX="command env command bash --noprofile"
 
 if [[ "$1" == shell ]]; then
